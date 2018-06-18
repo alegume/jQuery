@@ -85,7 +85,7 @@ $(function() { // Identico ao de cima
     });
 
     $('#remove').click(function() {
-        $('.box:eq(-3)').remove();
+        $('.box:eq(-4)').remove();
     });
 
     // .each()
@@ -95,6 +95,15 @@ $(function() { // Identico ao de cima
         });
     });
 
+    // hover 1 ou duas funcoes
+    $('a').hover(function() {
+        $(this).toggleClass('link');
+    });
+
+
+    /// AJAX (Asynchronous JavaScript and XML)
+    // Mas sem XML ;P
+    //$.ajax();
 
 });
 

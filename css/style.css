@@ -29,6 +29,10 @@ p {
   color: #666;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .black {
   color: #000;
   font-weight: bold;
