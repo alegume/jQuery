@@ -88,6 +88,13 @@ $(function() { // Identico ao de cima
         $('.box:eq(-3)').remove();
     });
 
+    // .each()
+    $('#copiar_links').click(function() {
+        $('li > a').each(function() {
+            $('#links').append(' | ' + $(this).text() + ' | ');
+        });
+    });
+
 
 });
 
