@@ -1,6 +1,6 @@
 //$(document).ready(function() { 
 $(function() { // Identico ao de cima
- 
+
     console.log('DOM Pronto');
 
     // Ao clicar no elemento <a>
@@ -39,7 +39,7 @@ $(function() { // Identico ao de cima
     $('a.external:first');
     $('tr:odd');
     $('#myForm :input');
-    $('div:visible');  
+    $('div:visible');
     // Todos depois dos 3 primeiros
     $('div:gt(2)');
     // divs com animacao
@@ -51,7 +51,7 @@ $(function() { // Identico ao de cima
 
     // Refinando selecoes
     $("article").has("p");
-    $("h1").not(".classe"); 
+    $("h1").not(".classe");
     $("ul li").first();
     $("ul li").last();
     $("ul li").eq(2);    // terceiro elemento
