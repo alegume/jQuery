@@ -11,7 +11,6 @@ $(function() { // Identico ao de cima
 				// Adiciona classes
 				$(this).addClass('black');
 
-
 				// manipula atributos
 				//console.log('href: ' + $(this).attr('href'));
 				$('a').attr('href', 'htt://ifsc.edu.br');
@@ -23,10 +22,17 @@ $(function() { // Identico ao de cima
 		});
 
 		// ao clicar no elemento <p>
-		$('p').click(function() {
+		$('p').hover(function() {
 				$(this).removeClass('blue').addClass('black');
-				//$(this).hide();
-				//$(this).toggleClass('black');
+				// $(this).hide();
+				// $(this).toggleClass('black');
+				console.log("Botou ;)");
+				// $(this).fadeToggle("slow");
+				// $(this).fadeOut(3000);
+		}, function() {
+			// $(this).fadeIn();
+			// $(this).fadeToggle();
+			console.log("Tirou :0");
 		});
 
 		// Seletores
@@ -57,26 +63,27 @@ $(function() { // Identico ao de cima
 		$("ul li").eq(2);    // terceiro elemento
 
 		// Encadeando
-		//$('article').find('h2').html('Cacilds');
+		// $('article').find('h2').html('Cacilds');
 
 		// Manipulando elemento
-		let x = $('p:first');
-		//x.html('<h4>Suco de cevadis</h4>');
-		// console.log(x.text());
-		// console.log(x.width());
-		// console.log(x.height());
-		// console.log(x.position());
-		$('img').css('border', '2px dashed black');
-		$('img').css({
-				width: '600px',
-				margin: '15px 0'
-		});
+		// let x = $('p:first');
+		// x.html('<h3>Suco de cevadis</h3>');
+		// console.log('texto: ' + x.text());
+		// console.log('html: ' + x.html());
+		// console.log('largura: ' + x.width());
+		// console.log('altura: ' + x.height());
+		// $('img').css('border', '2px dashed black');
+		// $('img').css({
+		// 		width: '600px',
+		// 		margin: '15px 0'
+		// });
 
 		// Mover, remover, copiar e clonar elementos
+		// Obs.: Comentar o $('#add').click de baixo
 		// $('#add').click(function() {
-		//     let x = prompt("Digite o nome", $('.boxes > .box').length - 1);
-		//     let elemento = $('<div class=\"box\">' + x + '</div>');
-		//     elemento.insertBefore('#add');
+		// 	let x = prompt("Digite o nome", $('.boxes > .box').length - 1);
+		// 	let elemento = $('<div class=\"box\">' + x + '</div>');
+		// 	elemento.insertBefore('#add');
 		// });
 
 		$('#add').click(function() {
@@ -89,10 +96,12 @@ $(function() { // Identico ao de cima
 		});
 
 		// .each()
+		$('#links').hide();
 		$('#copiar_links').click(function() {
 				$('li > a').each(function() {
-						$('#links').append(' | ' + $(this).text() + ' | ');
+						$('#links').show().append(' | ' + $(this).text() + ' |');
 				});
+				$('#links').append('<br />');
 		});
 
 		// hover 1 ou duas funcoes
@@ -100,13 +109,11 @@ $(function() { // Identico ao de cima
 				$(this).toggleClass('link');
 		});
 
-
 		/// AJAX (Asynchronous JavaScript and XML)
 		// Mas sem XML ;P
 		//$.ajax();
 
 });
-
 
 $(window).on("load", function() {
 		console.log("carregado");
